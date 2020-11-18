@@ -14,7 +14,7 @@ function fortunePortion(array, number) {
   return array[number];
 }
 
-function fortuneMessage () {
+function fortuneMessageGenerator () {
   let fortuneMessage = 
   'You ' + 
   fortunePortion(sectionOneArray, numberGenerator(sectionOneArray.length)) + 
@@ -26,5 +26,14 @@ function fortuneMessage () {
   return fortuneMessage;
 }
 
-//console.log(numberGenerator(5));
-console.log(fortuneMessage());
+let fortuneMessageArray = [];
+function fortuneMessageRepeater (count) {
+  for (let i = 0; i <= count; i ++) {
+    fortuneMessageArray[i] = fortuneMessageGenerator();
+  }
+  return fortuneMessageArray;
+}
+
+console.log(fortuneMessageRepeater(10));
+
+
