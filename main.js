@@ -1,7 +1,8 @@
 //random message generator mimicing useless fortune cookie messages
 //message made up of three (3) random portions
 function numberGenerator (number) {
-  return Math.floor(Math.random()* number + 1);
+  //want to return 0 to 4
+  return Math.floor(Math.random()* number);
 };
 
 function sectionOne (randomNumber) {
@@ -13,7 +14,7 @@ function sectionOne (randomNumber) {
 
 function sectionTwo (randomNumber) {
   //will need to flesh out arrayItems for readbility (verb)
-  let sectionTwoArray = ['require', 'avoid', 'engage', 'desire', 'escape'];
+  let sectionTwoArray = ['require', 'avoid', 'look into', 'desire', 'escape'];
   return sectionTwoArray[randomNumber];
 }
 
