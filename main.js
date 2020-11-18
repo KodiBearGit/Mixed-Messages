@@ -1,7 +1,7 @@
 //random message generator mimicing useless fortune cookie messages
 //message made up of three (3) random portions
 function numberGenerator (number) {
-  return Math.floor((Math.random)* number);
+  return Math.floor(Math.random()* number + 1);
 };
 
 function sectionOne (randomNumber) {
@@ -24,7 +24,9 @@ function sectionThree (randomNumber) {
 }
 
 function fortuneMessage () {
-  let fortuneMessage = `You ${sectionOne(numberGenerator())} ${sectionTwo(numberGenerator())} ${sectionThree(numberGenerator())}!`;3
+  let fortuneMessage = `You ${sectionOne(numberGenerator(5))} ${sectionTwo(numberGenerator(5))} ${sectionThree(numberGenerator(5))}!`;
   return fortuneMessage;
 }
 
+console.log(numberGenerator(5));
+console.log(fortuneMessage());
