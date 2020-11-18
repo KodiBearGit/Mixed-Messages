@@ -14,23 +14,18 @@ function fortunePortion(array, number) {
   return array[number];
 }
 
-function sectionOne (randomNumber) {
-  return sectionOneArray[randomNumber];
-};
-
-function sectionTwo (randomNumber) {
-  return sectionTwoArray[randomNumber];
-}
-
-function sectionThree (randomNumber) {
-  return sectionThreeArray[randomNumber];
-}
-
 function fortuneMessage () {
-  let fortuneMessage = `You ${sfortunePortion(sectionOneArray, numberGenerator(sectionOneArray.length))} ${fortunePortion(sectionTwoArray, numberGenerator(sectionTwoArray.length))} ${fortunePortion(sectionThreeArray, numberGenerator(sectionThreeArray.length))}!`;
+  let fortuneMessage = 
+  'You ' + 
+  fortunePortion(sectionOneArray, numberGenerator(sectionOneArray.length)) + 
+  ' ' +
+  fortunePortion(sectionTwoArray, numberGenerator(sectionTwoArray.length)) + 
+  ' ' +
+  fortunePortion(sectionThreeArray, numberGenerator(sectionThreeArray.length))+
+  '!';
   return fortuneMessage;
 }
 
 //console.log(numberGenerator(5));
-//console.log(fortuneMessage());
+console.log(fortuneMessage());
 
