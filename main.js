@@ -28,4 +28,3 @@ function fortuneMessage () {
 
 //console.log(numberGenerator(5));
 console.log(fortuneMessage());
-
