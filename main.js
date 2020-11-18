@@ -5,29 +5,32 @@ function numberGenerator (number) {
   return Math.floor(Math.random()* number);
 };
 
-function sectionOne (randomNumber) {
-//will need to flesh out arrayItems for readbility 
-  let sectionOneArray = ['will', 'should', 'can\'t', 'may', 
+let sectionOneArray = ['will', 'should', 'can\'t', 'may', 
 'might'];
+let sectionTwoArray = ['require', 'avoid', 'look into', 'desire', 'escape'];
+let sectionThreeArray = ['a good friend', 'a happy puppy', 'a strong mentor', 'a small fortune', 'some serious luck'];
+
+function fortunePortion(array, number) {
+  return array[number];
+}
+
+function sectionOne (randomNumber) {
   return sectionOneArray[randomNumber];
 };
 
 function sectionTwo (randomNumber) {
-  //will need to flesh out arrayItems for readbility (verb)
-  let sectionTwoArray = ['require', 'avoid', 'look into', 'desire', 'escape'];
   return sectionTwoArray[randomNumber];
 }
 
 function sectionThree (randomNumber) {
-    //will need to flesh out arrayItems for readbility
-  let sectionThreeArray = ['a good friend', 'a happy puppy', 'a strong mentor', 'a small fortune', 'some serious luck'];
   return sectionThreeArray[randomNumber];
 }
 
 function fortuneMessage () {
-  let fortuneMessage = `You ${sectionOne(numberGenerator(5))} ${sectionTwo(numberGenerator(5))} ${sectionThree(numberGenerator(5))}!`;
+  let fortuneMessage = `You ${sfortunePortion(sectionOneArray, numberGenerator(sectionOneArray.length))} ${fortunePortion(sectionTwoArray, numberGenerator(sectionTwoArray.length))} ${fortunePortion(sectionThreeArray, numberGenerator(sectionThreeArray.length))}!`;
   return fortuneMessage;
 }
 
-console.log(numberGenerator(5));
-console.log(fortuneMessage());
+//console.log(numberGenerator(5));
+//console.log(fortuneMessage());
+
