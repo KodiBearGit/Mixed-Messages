@@ -5,6 +5,12 @@ function numberGenerator (number) {
   return Math.floor(Math.random()* number);
 };
 
+function lottoNumberGenerator (number) {
+    //want to return 1 to maxDrawingNumber
+    return Math.floor(Math.random()* number + 1);
+  };
+  
+
 //array of items to generate a "not-so-much-a-fortune" sentance
 let sectionOneArray = ['will', 'should', 'can\'t', 'may', 
 'might'];
@@ -13,6 +19,16 @@ let sectionThreeArray = ['a good friend', 'a happy puppy', 'a strong mentor', 'a
 
 function fortunePortion(array, number) {
   return array[number];
+}
+
+//Next Steps part of project is "You’re welcome to expand your program beyond these project tasks and get creative!"  I've decided to add a randomly generated set of PowerBall Numbers to the end of the fortune.
+
+let powerBallArray = [];
+function powerBallNumberGenerator () {
+  for (let i = 0; i < 5; i++) {
+    powerBallArray[i] = lottoNumberGenerator (69);
+  }
+  return powerBallArray;
 }
 
 //I originally used three separate functions and had this function using string interpolation but concatenation seemed to be a cleaner way to present it.
@@ -37,6 +53,7 @@ function fortuneMessageRepeater (count) {
 }
 
 //generating the number of messages to array in paretheses, set to ten (10) for now.
-console.log(fortuneMessageRepeater(10));
+//console.log(fortuneMessageRepeater(10));
+console.log(powerBallNumberGenerator(5))
 
 
