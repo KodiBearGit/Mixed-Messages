@@ -28,7 +28,8 @@ function powerBallNumberGenerator () {
   for (let i = 0; i < 5; i++) {
     powerBallArray[i] = lottoNumberGenerator (69);
   }
-  return powerBallArray;
+  powerBallArray[5] = lottoNumberGenerator (26);
+  return powerBallArray.join(', ');
 }
 
 //I originally used three separate functions and had this function using string interpolation but concatenation seemed to be a cleaner way to present it.
@@ -40,7 +41,10 @@ function fortuneMessageGenerator () {
   fortunePortion(sectionTwoArray, numberGenerator(sectionTwoArray.length)) + 
   ' ' +
   fortunePortion(sectionThreeArray, numberGenerator(sectionThreeArray.length))+
-  '!';
+  '!  ' +
+  'PowerBall #s: ' +
+  powerBallNumberGenerator();
+  ;
   return fortuneMessage;
 }
 
@@ -53,7 +57,7 @@ function fortuneMessageRepeater (count) {
 }
 
 //generating the number of messages to array in paretheses, set to ten (10) for now.
-//console.log(fortuneMessageRepeater(10));
-console.log(powerBallNumberGenerator(5))
+console.log(fortuneMessageRepeater(10));
+//console.log(powerBallNumberGenerator())
 
 
