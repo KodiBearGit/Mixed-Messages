@@ -1,10 +1,11 @@
 //random message generator mimicing useless fortune cookie messages
 //message made up of three (3) random portions
 function numberGenerator (number) {
-  //want to return 0 to 4
+  //want to return 0 to array.length
   return Math.floor(Math.random()* number);
 };
 
+//array of items to generate a "not-so-much-a-fortune" sentance
 let sectionOneArray = ['will', 'should', 'can\'t', 'may', 
 'might'];
 let sectionTwoArray = ['require', 'avoid', 'look into', 'desire', 'escape'];
@@ -14,6 +15,7 @@ function fortunePortion(array, number) {
   return array[number];
 }
 
+//I originally used three separate functions and had this function using string interpolation but concatenation seemed to be a cleaner way to present it.
 function fortuneMessageGenerator () {
   let fortuneMessage = 
   'You ' + 
@@ -34,6 +36,7 @@ function fortuneMessageRepeater (count) {
   return fortuneMessageArray;
 }
 
+//generating the number of messages to array in paretheses, set to ten (10) for now.
 console.log(fortuneMessageRepeater(10));
 
 
