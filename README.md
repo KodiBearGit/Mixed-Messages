@@ -29,12 +29,13 @@ node main.js
 List of features
 * Generates random fortune message from three parameters
 * Messages are stored in an array
+* Added a lotto number generator to end of fortune
 
 ## Status
-Project is: _in progress_ in final stages
+Project is: completed
 
 ## Inspiration
 Codecademy JavaScript syntax portfolio project, a (sort of) fortune (as in fortune cookie) generator.
 
 ## Contact
-Created by [@findme](https://www.findme/) - feel free to contact me!
+Created by KodiBearGit
